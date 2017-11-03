@@ -22,7 +22,7 @@ MonPartyData:
 	dn SPRITE_QUADRUPED, SPRITE_QUADRUPED              ;Rattata/Raticate
 	dn SPRITE_BIRD_M, SPRITE_BIRD_M                    ;Spearow/Fearow
 	dn SPRITE_SNAKE, SPRITE_SNAKE                      ;Ekans/Arbok
-	dn SPRITE_PIKACHU_FAMILY, SPRITE_PIKACHU_FAMILY    ;Pikachu/Raichu
+	dn SPRITE_FAIRY, SPRITE_FAIRY                      ;Pikachu/Raichu
 	dn SPRITE_MON, SPRITE_MON                          ;Sandshrew/Sandslash
 	dn SPRITE_MON, SPRITE_MON                          ;NidoranF/Nidorina
 	dn SPRITE_MON, SPRITE_MON                          ;Nidoqueen/NidoranM
@@ -66,7 +66,7 @@ MonPartyData:
 	dn SPRITE_MON, SPRITE_MON                          ;Hitmonchan/Lickitung
 	dn SPRITE_MON, SPRITE_MON                          ;Koffing/Weezing
 	dn SPRITE_QUADRUPED, SPRITE_MON                    ;Rhyhorn/Rhydon
-	dn SPRITE_FAIRY, SPRITE_GRASS                      ;Chansey/Tangela
+	dn SPRITE_FAIRY, SPRITE_PIKACHU_FAMILY             ;Chansey/Tangela
 	dn SPRITE_MON, SPRITE_WATER                        ;Kangaskhan/Horsea
 	dn SPRITE_WATER, SPRITE_WATER                      ;Seadra/Goldeen
 	dn SPRITE_WATER, SPRITE_HELIX                      ;Seaking/Staryu
@@ -85,4 +85,16 @@ MonPartyData:
 	dn SPRITE_BIRD_M, SPRITE_BIRD_M                    ;Zapdos/Moltres
 	dn SPRITE_SNAKE, SPRITE_SNAKE                      ;Dratini/Dragonair
 	dn SPRITE_SNAKE, SPRITE_MON                        ;Dragonite/Mewtwo
-	dn SPRITE_MON, 0                                   ;Mew/Padding
+	dn SPRITE_MON, SPRITE_BUG                          ;Mew/Heracross
+	dn SPRITE_GRASS, SPRITE_GRASS                      ;Budew/Roselia
+	dn SPRITE_GRASS, SPRITE_PIKACHU_FAMILY             ;Roserade/Tangrowth
+	dn SPRITE_HELIX, SPRITE_BALL_M                     ;Corsola/Baltoy
+	dn SPRITE_BALL_M, SPRITE_GRASS                     ;Claydol/Lotad
+	dn SPRITE_GRASS, SPRITE_GRASS                      ;Lombre/Ludicolo
+	dn SPRITE_MON, SPRITE_HELIX                        ;Gligar/Lunatone
+	dn SPRITE_BALL_M, SPRITE_BALL_M                    ;Litwick/Lampent
+	dn SPRITE_BALL_M, SPRITE_WATER                     ;Chandelure/Frillish
+	dn SPRITE_WATER, SPRITE_WATER                      ;Jellicent/Nihilego
+	dn SPRITE_MON, SPRITE_SNAKE                        ;Xurkitree/Celesteela
+	dn SPRITE_MON, SPRITE_MON 	                       ;Threeman/Garfield
+	dn SPRITE_BALL_M, 0  	                           ;Ramiel/Padding

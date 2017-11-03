@@ -815,12 +815,25 @@ ItemUseEvoStone:
 	ld hl, wPartyMonNicks
 	call GetPartyMonName
 	ld hl, RefusingText
-	call PrintText
+	;call PrintText
 	ld a, $4
 	ld [wd49c], a
 	ld a, $82
 	ld [wPikachuMood], a
-	jr .canceledItemUse
+	;jr .canceledItemUse
+	
+	ld a, SFX_HEAL_AILMENT
+	call PlaySoundWaitForCurrent
+	call WaitForSoundToFinish
+	ld a, $01
+	ld [wForceEvolution], a
+	callab TryEvolvingMon ; try to evolve pokemon
+	pop af
+	ld [wWhichPokemon], a
+	ld hl, wNumBagItems
+	ld a, 1 ; remove 1 stone
+	ld [wItemQuantity], a
+	jp RemoveItemFromInventory
 
 .notPlayerPikachu
 	ld a, SFX_HEAL_AILMENT

@@ -10,5 +10,6 @@ ZoneMons1:
 	db 24,MAROWAK
 	db 21,CHANSEY
 	db 15,SCYTHER
+	db 15,HERACROSS
 	db $00
 

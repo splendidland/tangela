@@ -228,9 +228,9 @@ MonPartySpritePointers:
 	db BANK(MonPartySprites)
 	dw vSprites + $260
 
-	dw PikachuSprite
+	dw TangelaSprite
 	db $40 / $10 ; $40 bytes
-	db BANK(PikachuSprite)
+	db BANK(TangelaSprite)
 	dw vSprites + $280
 
 	dw MonPartySprites + $100
@@ -303,9 +303,9 @@ MonPartySpritePointers:
 	db BANK(MonPartySprites)
 	dw vSprites + $660
 
-	dw PikachuSprite + $C0
+	dw TangelaSprite + $C0
 	db $40 / $10 ; $40 bytes
-	db BANK(PikachuSprite)
+	db BANK(TangelaSprite)
 	dw vSprites + $680
 
 	dw MonPartySprites + $140

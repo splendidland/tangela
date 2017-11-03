@@ -163,8 +163,6 @@ ROMX $2f
   "Move Names"
 ;  "bank2f"
 
-ROMX $30
-  "bank30"
 
 ROMX $31
   "Pikachu Cries 6"
@@ -216,8 +214,8 @@ WRAM0
 
 WRAMX 1
   "WRAM Bank 1"
-;  ORG $df00
-;  "Stack"
+   org $df30
+   "Stack"
 
 ; WRAMX 5
 ;   "WRAMBank5"

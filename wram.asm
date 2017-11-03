@@ -2346,6 +2346,8 @@ wMonHGrowthRate:: ; d0ca
 wMonHLearnset:: ; d0cb
 ; bit field
 	flag_array 50 + 5
+	
+wMonHPicBank::
 	ds 1
 
 wSavedTilesetType:: ; d0d3
@@ -3593,9 +3595,13 @@ wLastOBP1:: ds 1 ; def3
 wdef5:: ds 1 ; def4
 wBGPPalsBuffer:: ds NUM_ACTIVE_PALS * PAL_SIZE ; def5
 
-SECTION "Stack", WRAMX[$df15], BANK[1]
-	ds $ea
+SECTION "Stack", WRAMX
+    ds $dfff - $df30
 wStack:: ; dfff
+
+wVermillionDockCurScript::
+; overload
+	ds 0 ;
 
 
 INCLUDE "sram.asm"

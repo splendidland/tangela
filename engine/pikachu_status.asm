@@ -1,4 +1,12 @@
 IsStarterPikachuInOurParty::
+  call IsStarterPikachuInOurParty2
+  jr nc, .checkR
+  ret
+.checkR
+ call IsStarterTangrowthInOurParty
+ ret
+
+IsStarterPikachuInOurParty2::
 	ld hl, wPartySpecies
 	ld de, wPartyMon1OTID
 	ld bc, wPartyMonOT
@@ -9,7 +17,7 @@ IsStarterPikachuInOurParty::
 	push hl
 	inc a
 	jr z, .noPlayerPikachu
-	cp PIKACHU + 1
+	cp TANGELA + 1
 	jr nz, .curMonNotPlayerPikachu
 	ld h, d
 	ld l, e
@@ -44,7 +52,6 @@ IsStarterPikachuInOurParty::
 	ld b, h
 	ld c, l
 	jr .loop
-
 .sameOT
 	pop bc
 	pop de
@@ -54,15 +61,80 @@ IsStarterPikachuInOurParty::
 	add hl, bc
 	ld a, [hli]
 	or [hl]
-	jr z, .noPlayerPikachu ; XXX how is this determined?
+	jr z, .noPlayerPikachu
 	pop hl
 	scf
 	ret
-
 .noPlayerPikachu
 	pop hl
 	and a
 	ret
+	
+IsStarterTangrowthInOurParty::
+	ld hl, wPartySpecies
+	ld de, wPartyMon1OTID
+	ld bc, wPartyMonOT
+	push hl
+.loop
+	pop hl
+	ld a, [hli]
+	push hl
+	inc a
+	jr z, .noPlayerPikachu
+	cp TANGROWTH + 1
+	jr nz, .curMonNotPlayerPikachu
+	ld h, d
+	ld l, e
+	ld a, [wPlayerID]
+	cp [hl]
+	jr nz, .curMonNotPlayerPikachu
+	inc hl
+	ld a, [wPlayerID+1]
+	cp [hl]
+	jr nz, .curMonNotPlayerPikachu
+	push de
+	push bc
+	ld hl, wPlayerName
+	ld d, $6 ; possible player length - 1
+.nameCompareLoop
+	dec d
+	jr z, .sameOT
+	ld a, [bc]
+	inc bc
+	cp [hl]
+	inc hl
+	jr z, .nameCompareLoop
+	pop bc
+	pop de
+.curMonNotPlayerPikachu
+	ld hl, wPartyMon2 - wPartyMon1
+	add hl, de
+	ld d, h
+	ld e, l
+	ld hl, NAME_LENGTH
+	add hl, bc
+	ld b, h
+	ld c, l
+	jr .loop
+.sameOT
+	pop bc
+	pop de
+	ld h, d
+	ld l, e
+	ld bc, -NAME_LENGTH
+	add hl, bc
+	ld a, [hli]
+	or [hl]
+	jr z, .noPlayerPikachu 
+	pop hl
+	scf
+	ret
+.noPlayerPikachu
+	pop hl
+	and a
+	ret
+
+
 
 IsThisPartymonStarterPikachu_Box::
 	ld hl, wBoxMon1
@@ -79,8 +151,13 @@ asm_fce21:
 	ld a, [wWhichPokemon]
 	call AddNTimes
 	ld a, [hl]
-	cp PIKACHU
+cp TANGROWTH
+	jr nz, .isPika
+	jr .yes
+.isPika
+	cp TANGELA
 	jr nz, .notPlayerPikachu
+.yes
 	ld bc, wPartyMon1OTID - wPartyMon1
 	add hl, bc
 	ld a, [wPlayerID]
@@ -189,8 +266,13 @@ IsSurfingPikachuInThePlayersParty::
 	push hl
 	inc a
 	jr z, .noSurfingPlayerPikachu
-	cp PIKACHU+1
+cp TANGROWTH+1
+	jr nz, .isPika
+	jr .yes
+.isPika
+	cp TANGELA+1
 	jr nz, .curMonNotSurfingPlayerPikachu
+.yes
 	ld h, d
 	ld l, e
 	push hl
@@ -204,7 +286,7 @@ IsSurfingPikachuInThePlayersParty::
 	jr nz, .moveSearchLoop
 	pop bc
 	pop hl
-	jr .curMonNotSurfingPlayerPikachu
+	jr .foundSurfingPikachu
 
 .foundSurfingPikachu
 	pop bc

@@ -11,6 +11,8 @@ PICS_2 EQU $A
 PICS_3 EQU $B
 PICS_4 EQU $C
 PICS_5 EQU $D
+PICS_6 EQU $30
+PICS_7 EQU $2D
 
 INCLUDE "home.asm"
 
@@ -548,6 +550,7 @@ INCLUDE "engine/battle/save_trainer_name.asm"
 
 SECTION "Pics 2", ROMX, BANK[PICS_2]
 
+
 GrowlithePicFront:   INCBIN "pic/ymon/growlithe.pic"
 GrowlithePicBack:    INCBIN "pic/monback/growlitheb.pic"
 OnixPicFront:        INCBIN "pic/ymon/onix.pic"
@@ -827,6 +830,59 @@ INCLUDE "engine/titlescreen2.asm"
 INCLUDE "engine/slot_machine.asm"
 INCLUDE "engine/game_corner_slots.asm"
 
+SECTION "Pics 6", ROMX, BANK[PICS_6]
+HeracrossPicFront::   INCBIN "pic/ymon/heracross.pic"
+HeracrossPicBack::    INCBIN "pic/monback/heracrossb.pic"
+BudewPicFront::       INCBIN "pic/ymon/budew.pic"
+BudewPicBack::        INCBIN "pic/monback/budewb.pic"
+RoseliaPicFront::     INCBIN "pic/ymon/roselia.pic"
+RoseliaPicBack::      INCBIN "pic/monback/roseliab.pic"
+RoseradePicFront::    INCBIN "pic/ymon/roserade.pic"
+RoseradePicBack::     INCBIN "pic/monback/roseradeb.pic"
+TangrowthPicFront::   INCBIN "pic/ymon/tangrowth.pic"
+TangrowthPicBack::    INCBIN "pic/monback/tangrowthb.pic"
+CorsolaPicFront::     INCBIN "pic/ymon/corsola.pic"
+CorsolaPicBack::      INCBIN "pic/monback/corsolab.pic"
+BaltoyPicFront::      INCBIN "pic/ymon/baltoy.pic"
+BaltoyPicBack::       INCBIN "pic/monback/baltoyb.pic"
+ClaydolPicFront::     INCBIN "pic/ymon/claydol.pic"
+ClaydolPicBack::      INCBIN "pic/monback/claydolb.pic"
+LotadPicFront::       INCBIN "pic/ymon/lotad.pic"
+LotadPicBack::        INCBIN "pic/monback/lotadb.pic"
+LombrePicFront::      INCBIN "pic/ymon/lombre.pic"
+LombrePicBack::       INCBIN "pic/monback/lombreb.pic"
+LudicoloPicFront::    INCBIN "pic/ymon/ludicolo.pic"
+LudicoloPicBack::     INCBIN "pic/monback/ludicolob.pic"
+GligarPicFront::      INCBIN "pic/ymon/gligar.pic"
+GligarPicBack::       INCBIN "pic/monback/gligarb.pic"
+LunatonePicFront::    INCBIN "pic/ymon/lunatone.pic"
+LunatonePicBack::     INCBIN "pic/monback/lunatoneb.pic"
+LitwickPicFront::     INCBIN "pic/ymon/litwick.pic"
+LitwickPicBack::      INCBIN "pic/monback/litwickb.pic"
+LampentPicFront::     INCBIN "pic/ymon/lampent.pic"
+LampentPicBack::      INCBIN "pic/monback/lampentb.pic"
+ChandelurePicFront::  INCBIN "pic/ymon/chandelure.pic"
+ChandelurePicBack::   INCBIN "pic/monback/chandelureb.pic"
+NihilegoPicFront::    INCBIN "pic/ymon/nihilego.pic"
+NihilegoPicBack::     INCBIN "pic/monback/nihilegob.pic"
+XurkitreePicFront::   INCBIN "pic/ymon/xurkitree.pic"
+XurkitreePicBack::    INCBIN "pic/monback/xurkitreeb.pic"
+CelesteelaPicFront::  INCBIN "pic/ymon/celesteela.pic"
+CelesteelaPicBack::   INCBIN "pic/monback/celesteelab.pic"
+
+
+
+SECTION "Pics 7", ROMX, BANK[PICS_7]
+ThreemanPicFront::    INCBIN "pic/ymon/threeman.pic"
+ThreemanPicBack::     INCBIN "pic/monback/threemanb.pic"
+FrillishPicFront::  INCBIN "pic/ymon/frillish.pic"
+FrillishPicBack::   INCBIN "pic/monback/frillishb.pic"
+JellicentPicFront::  INCBIN "pic/ymon/jellicent.pic"
+JellicentPicBack::   INCBIN "pic/monback/jellicentb.pic"
+GarfieldPicFront::  INCBIN "pic/ymon/garfield.pic"
+GarfieldPicBack::   INCBIN "pic/monback/garfieldb.pic"
+RamielPicFront::  INCBIN "pic/ymon/ramiel.pic"
+RamielPicBack::   INCBIN "pic/monback/ramielb.pic"
 
 SECTION "bank0E",ROMX,BANK[$0E]
 
@@ -1990,10 +2046,6 @@ SECTION "bank2f",ROMX[$5000],BANK[$2F]
 INCLUDE "engine/bg_map_attributes.asm"
 
 
-SECTION "bank30",ROMX,BANK[$30]
-
-; This whole bank is garbage data.
-INCBIN "engine/bank30.bin"
 
 
 SECTION "bank39",ROMX,BANK[$39]
@@ -2055,6 +2107,46 @@ INCBIN "gfx/pikachu/unknown_e5541.2bpp"
 Pic_e56d1:
 INCBIN "gfx/pikachu/unknown_e56d1.pic"
 GFX_e5794:
+
+
+
+SECTION "bank3A",ROMX,BANK[$3A]
+
+INCLUDE "text/monster_names.asm"
+
+INCLUDE "engine/overworld/is_player_just_outside_map.asm"
+
+INCLUDE "engine/printer.asm"
+INCLUDE "engine/diploma_3a.asm"
+
+SurfingPikachu3Graphics:  INCBIN "gfx/surfing_pikachu_3.t1.2bpp"
+SurfingPikachu3GraphicsEnd:
+
+INCLUDE "engine/unknown_ea3ea.asm"
+
+INCLUDE "engine/overworld/npc_movement_2.asm"
+
+SECTION "bank3C",ROMX,BANK[$3C]
+
+INCLUDE "engine/bank3c.asm"
+
+
+SECTION "bank3D",ROMX,BANK[$3D]
+
+INCLUDE "engine/bank3d.asm"
+
+
+SECTION "bank3E",ROMX,BANK[$3E]
+
+INCLUDE "engine/bank3e.asm"
+
+
+SECTION "bank3F",ROMX,BANK[$3F]
+
+INCLUDE "engine/bank3f.asm"
+
+SECTION "bank40",ROMX,BANK[$40]
+
 INCBIN "gfx/pikachu/unknown_e5794.2bpp"
 Pic_e5924:
 INCBIN "gfx/pikachu/unknown_e5924.pic"
@@ -2112,39 +2204,3 @@ GFX_e7b83:
 INCBIN "gfx/pikachu/unknown_e7b83.2bpp"
 GFX_e7d13:
 INCBIN "gfx/pikachu/unknown_e7d13.2bpp"
-
-
-SECTION "bank3A",ROMX,BANK[$3A]
-
-INCLUDE "text/monster_names.asm"
-
-INCLUDE "engine/overworld/is_player_just_outside_map.asm"
-
-INCLUDE "engine/printer.asm"
-INCLUDE "engine/diploma_3a.asm"
-
-SurfingPikachu3Graphics:  INCBIN "gfx/surfing_pikachu_3.t1.2bpp"
-SurfingPikachu3GraphicsEnd:
-
-INCLUDE "engine/unknown_ea3ea.asm"
-
-INCLUDE "engine/overworld/npc_movement_2.asm"
-
-SECTION "bank3C",ROMX,BANK[$3C]
-
-INCLUDE "engine/bank3c.asm"
-
-
-SECTION "bank3D",ROMX,BANK[$3D]
-
-INCLUDE "engine/bank3d.asm"
-
-
-SECTION "bank3E",ROMX,BANK[$3E]
-
-INCLUDE "engine/bank3e.asm"
-
-
-SECTION "bank3F",ROMX,BANK[$3F]
-
-INCLUDE "engine/bank3f.asm"

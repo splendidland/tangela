@@ -29,8 +29,8 @@ PokedexEntryPointers:
 	dw BlastoiseDexEntry
 	dw PinsirDexEntry
 	dw TangelaDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw HeracrossDexEntry
+	dw BudewDexEntry
 	dw GrowlitheDexEntry
 	dw OnixDexEntry
 	dw FearowDexEntry
@@ -48,26 +48,26 @@ PokedexEntryPointers:
 	dw PsyduckDexEntry
 	dw DrowzeeDexEntry
 	dw GolemDexEntry
-	dw MissingNoDexEntry
+	dw RoseliaDexEntry
 	dw MagmarDexEntry
-	dw MissingNoDexEntry
+	dw RoseradeDexEntry
 	dw ElectabuzzDexEntry
 	dw MagnetonDexEntry
 	dw KoffingDexEntry
-	dw MissingNoDexEntry
+	dw TangrowthDexEntry
 	dw MankeyDexEntry
 	dw SeelDexEntry
 	dw DiglettDexEntry
 	dw TaurosDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw CorsolaDexEntry
+	dw BaltoyDexEntry
+	dw ClaydolDexEntry
 	dw FarfetchdDexEntry
 	dw VenonatDexEntry
 	dw DragoniteDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw XurkitreeDexEntry
+	dw LotadDexEntry
+	dw LombreDexEntry
 	dw DoduoDexEntry
 	dw PoliwagDexEntry
 	dw JynxDexEntry
@@ -77,23 +77,23 @@ PokedexEntryPointers:
 	dw DittoDexEntry
 	dw MeowthDexEntry
 	dw KrabbyDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw LudicoloDexEntry
+	dw GligarDexEntry
+	dw LunatoneDexEntry
 	dw VulpixDexEntry
 	dw NinetalesDexEntry
 	dw PikachuDexEntry
 	dw RaichuDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw LitwickDexEntry
+	dw LampentDexEntry
 	dw DratiniDexEntry
 	dw DragonairDexEntry
 	dw KabutoDexEntry
 	dw KabutopsDexEntry
 	dw HorseaDexEntry
 	dw SeadraDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw ChandelureDexEntry
+	dw NihilegoDexEntry
 	dw SandshrewDexEntry
 	dw SandslashDexEntry
 	dw OmanyteDexEntry
@@ -113,27 +113,27 @@ PokedexEntryPointers:
 	dw WeedleDexEntry
 	dw KakunaDexEntry
 	dw BeedrillDexEntry
-	dw MissingNoDexEntry
+	dw CelesteelaDexEntry
 	dw DodrioDexEntry
 	dw PrimeapeDexEntry
 	dw DugtrioDexEntry
 	dw VenomothDexEntry
 	dw DewgongDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw ThreemanDexEntry
+	dw FrillishDexEntry
 	dw CaterpieDexEntry
 	dw MetapodDexEntry
 	dw ButterfreeDexEntry
 	dw MachampDexEntry
-	dw MissingNoDexEntry
+	dw JellicentDexEntry
 	dw GolduckDexEntry
 	dw HypnoDexEntry
 	dw GolbatDexEntry
 	dw MewtwoDexEntry
 	dw SnorlaxDexEntry
 	dw MagikarpDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw GarfieldDexEntry
+	dw RamielDexEntry
 	dw MukDexEntry
 	dw MissingNoDexEntry
 	dw KinglerDexEntry
@@ -1251,6 +1251,173 @@ MewDexEntry:
 	dw 90
 	TX_FAR _MewDexEntry
 	db "@"
+	
+HeracrossDexEntry:
+	db "SINGLEHORN@"
+	db 4,11
+	dw 1190
+	TX_FAR _HeracrossDexEntry
+	db "@"
+	
+BudewDexEntry:
+	db "BUD@"
+	db 0,08
+	dw 26
+	TX_FAR _BudewDexEntry
+	db "@"
+	
+RoseliaDexEntry:
+	db "THORN@"
+	db 1,00
+	dw 44
+	TX_FAR _RoseliaDexEntry
+	db "@"
+	
+RoseradeDexEntry:
+	db "BOUQUET@"
+	db 2,11
+	dw 320
+	TX_FAR _RoseradeDexEntry
+	db "@"
+	
+TangrowthDexEntry:
+	db "VINE@"
+	db 6,07
+	dw 2835
+	TX_FAR _TangrowthDexEntry
+	db "@"
+	
+CorsolaDexEntry:
+	db "CORAL@"
+	db 2,00
+	dw 110
+	TX_FAR _CorsolaDexEntry
+	db "@"
+	
+BaltoyDexEntry:
+	db "CLAY DOLL@"
+	db 1,08
+	dw 474
+	TX_FAR _BaltoyDexEntry
+	db "@"
+	
+ClaydolDexEntry:
+	db "CLAY DOLL@"
+	db 4,11
+	dw 2380
+	TX_FAR _ClaydolDexEntry
+	db "@"
+	
+LotadDexEntry:
+	db "WATER WEED@"
+	db 1,08
+	dw 260
+	TX_FAR _LotadDexEntry
+	db "@"
+LombreDexEntry:
+	db "JOLLY@"
+	db 3,11
+	dw 325
+	TX_FAR _LombreDexEntry
+	db "@"
+
+LudicoloDexEntry:
+	db "CAREFREE@"
+	db 4,11
+	dw 1213
+	TX_FAR _LudicoloDexEntry
+	db "@"
+
+GligarDexEntry:
+	db "FLYSCORPIO@"
+	db 3,07
+	dw 1429
+	TX_FAR _GligarDexEntry
+	db "@"
+
+LunatoneDexEntry:
+	db "METEORITE@"
+	db 3,03
+	dw 3704
+	TX_FAR _LunatoneDexEntry
+	db "@"
+
+LitwickDexEntry:
+	db "CANDLE@"
+	db 1,00
+	dw 680
+	TX_FAR _LitwickDexEntry
+	db "@"
+
+LampentDexEntry:
+	db "LAMP@"
+	db 2,00
+	dw 287
+	TX_FAR _LampentDexEntry
+	db "@"
+
+ChandelureDexEntry:
+	db "LURING@"
+	db 3,03
+	dw 756
+	TX_FAR _ChandelureDexEntry
+	db "@"
+	
+FrillishDexEntry:
+	db "FLOATING@"
+	db 3,11
+	dw 728
+	TX_FAR _FrillishDexEntry
+	db "@"
+	
+JellicentDexEntry:
+	db "FLOATING@"
+	db 7,03
+	dw 2976
+	TX_FAR _JellicentDexEntry
+	db "@"
+
+NihilegoDexEntry:
+	db "PARASITE@"
+	db 3,11
+	dw 1224
+	TX_FAR _NihilegoDexEntry
+	db "@"
+
+XurkitreeDexEntry:
+	db "GLOWING@"
+	db 12,06
+	dw 2205
+	TX_FAR _XurkitreeDexEntry
+	db "@"
+
+CelesteelaDexEntry:
+	db "LAUNCH@"
+	db 30,02
+	dw 22044
+	TX_FAR _CelesteelaDexEntry
+	db "@"
+
+ThreemanDexEntry:
+	db "NUMBER@"
+	db 3,33
+	dw 333
+	TX_FAR _ThreemanDexEntry
+	db "@"	
+	
+GarfieldDexEntry:
+	db "LASAGNA@"
+	db 2,2
+	dw 180
+	TX_FAR _GarfieldDexEntry
+	db "@"	
+	
+RamielDexEntry:
+	db "5th ANGEL@"
+	db 98,11
+	dw 34951
+	TX_FAR _RamielDexEntry
+	db "@"	
 
 MissingNoDexEntry:
 	db "???@"

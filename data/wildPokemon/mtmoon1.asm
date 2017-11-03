@@ -3,11 +3,11 @@ MoonMons1:
 	db 8,ZUBAT
 	db 9,ZUBAT
 	db 10,GEODUDE
-	db 6,ZUBAT
+	db 6,BALTOY
 	db 7,ZUBAT
 	db 10,ZUBAT
 	db 10,GEODUDE
-	db 11,ZUBAT
+	db 11,LUNATONE
 	db 12,SANDSHREW
 	db 11,CLEFAIRY
 	db $00

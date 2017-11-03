@@ -30,8 +30,8 @@ const_value = 1
 	const BLASTOISE    ; $1C
 	const PINSIR       ; $1D
 	const TANGELA      ; $1E
-	const MISSINGNO_1F ; $1F
-	const MISSINGNO_20 ; $20
+	const HERACROSS    ; $1F
+	const BUDEW        ; $20
 	const GROWLITHE    ; $21
 	const ONIX         ; $22
 	const FEAROW       ; $23
@@ -49,26 +49,26 @@ const_value = 1
 	const PSYDUCK      ; $2F
 	const DROWZEE      ; $30
 	const GOLEM        ; $31
-	const MISSINGNO_32 ; $32
+	const ROSELIA      ; $32
 	const MAGMAR       ; $33
-	const MISSINGNO_34 ; $34
+	const ROSERADE     ; $34
 	const ELECTABUZZ   ; $35
 	const MAGNETON     ; $36
 	const KOFFING      ; $37
-	const MISSINGNO_38 ; $38
+	const TANGROWTH    ; $38
 	const MANKEY       ; $39
 	const SEEL         ; $3A
 	const DIGLETT      ; $3B
 	const TAUROS       ; $3C
-	const MISSINGNO_3D ; $3D
-	const MISSINGNO_3E ; $3E
-	const MISSINGNO_3F ; $3F
+	const CORSOLA      ; $3D
+	const BALTOY       ; $3E
+	const CLAYDOL      ; $3F
 	const FARFETCHD    ; $40
 	const VENONAT      ; $41
 	const DRAGONITE    ; $42
-	const MISSINGNO_43 ; $43
-	const MISSINGNO_44 ; $44
-	const MISSINGNO_45 ; $45
+	const XURKITREE    ; $43
+	const LOTAD        ; $44
+	const LOMBRE       ; $45
 	const DODUO        ; $46
 	const POLIWAG      ; $47
 	const JYNX         ; $48
@@ -78,23 +78,23 @@ const_value = 1
 	const DITTO        ; $4C
 	const MEOWTH       ; $4D
 	const KRABBY       ; $4E
-	const MISSINGNO_4F ; $4F
-	const MISSINGNO_50 ; $50
-	const MISSINGNO_51 ; $51
+	const LUDICOLO     ; $4F
+	const GLIGAR       ; $50
+	const LUNATONE     ; $51
 	const VULPIX       ; $52
 	const NINETALES    ; $53
 	const PIKACHU      ; $54
 	const RAICHU       ; $55
-	const MISSINGNO_56 ; $56
-	const MISSINGNO_57 ; $57
+	const LITWICK      ; $56
+	const LAMPENT      ; $57
 	const DRATINI      ; $58
 	const DRAGONAIR    ; $59
 	const KABUTO       ; $5A
 	const KABUTOPS     ; $5B
 	const HORSEA       ; $5C
 	const SEADRA       ; $5D
-	const MISSINGNO_5E ; $5E
-	const MISSINGNO_5F ; $5F
+	const CHANDELURE   ; $5E
+	const NIHILEGO     ; $5F
 	const SANDSHREW    ; $60
 	const SANDSLASH    ; $61
 	const OMANYTE      ; $62
@@ -114,27 +114,27 @@ const_value = 1
 	const WEEDLE       ; $70
 	const KAKUNA       ; $71
 	const BEEDRILL     ; $72
-	const MISSINGNO_73 ; $73
+	const CELESTEELA   ; $73
 	const DODRIO       ; $74
 	const PRIMEAPE     ; $75
 	const DUGTRIO      ; $76
 	const VENOMOTH     ; $77
 	const DEWGONG      ; $78
-	const MISSINGNO_79 ; $79
-	const MISSINGNO_7A ; $7A
+	const THREEMAN     ; $79
+	const FRILLISH     ; $7A
 	const CATERPIE     ; $7B
 	const METAPOD      ; $7C
 	const BUTTERFREE   ; $7D
 	const MACHAMP      ; $7E
-	const MISSINGNO_7F ; $7F
+	const JELLICENT    ; $7F
 	const GOLDUCK      ; $80
 	const HYPNO        ; $81
 	const GOLBAT       ; $82
 	const MEWTWO       ; $83
 	const SNORLAX      ; $84
 	const MAGIKARP     ; $85
-	const MISSINGNO_86 ; $86
-	const MISSINGNO_87 ; $87
+	const GARFIELD     ; $86
+	const RAMIEL       ; $87
 	const MUK          ; $88
 	const MISSINGNO_8A ; $8A
 	const KINGLER      ; $8A

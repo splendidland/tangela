@@ -44,6 +44,12 @@ InitOutsideMapSprites:
 	ld de, wSpriteSet
 	ld bc, (wSpriteSetID - wSpriteSet)
 	call CopyData ; copy it to wSpriteSet
+	;change wSpriteSet here to Raichu if you want a Raichu. but what to check, hmm... how about a new function cloned from IsStarterPikachuInOurParty to check for Raichu instead? Worked for me.
+	callab IsStarterTangrowthInOurParty
+  jr nc, .nope
+  ld a, SPRITE_TANG
+  ld [wSpriteSet], a
+.nope
 	call LoadMapSpriteTilePatterns
 .skipLoadingSpriteSet
 	call Func_14150
@@ -62,8 +68,14 @@ LoadSpriteSetFromMapHeader:
 	ld bc, (wSpriteSetID - wSpriteSet)
 	xor a
 	call FillMemory
-	ld a, SPRITE_PIKACHU ; load Pikachu separately
+	ld a, SPRITE_TANG
 	ld [wSpriteSet], a
+	;load raichu on cert flag
+	callab IsStarterPikachuInOurParty2
+  jr z, .nope
+  ld a, SPRITE_PIKACHU ; load Pikachu separately
+  ld [wSpriteSet], a
+.nope
 	ld hl, wSprite01SpriteStateData1
 	ld a, 14
 .storeVRAMSlotsLoop

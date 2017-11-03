@@ -5,10 +5,10 @@ TowerMons4:
 	db 22,GASTLY
 	db 23,GASTLY
 	db 24,GASTLY
-	db 19,GASTLY
-	db 18,GASTLY
+	db 19,LITWICK
+	db 18,LITWICK
 	db 25,GASTLY
-	db 20,HAUNTER
+	db 20,LAMPENT
 	db 25,HAUNTER
 	db $00
 

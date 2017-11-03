@@ -8,9 +8,14 @@ _CeladonCityText1::
 	done
 
 _CeladonCityText2::
-	text "Heheh! This GYM"
-	line "is great! It's"
-	cont "full of women!"
+	text "Heheh.. This GYM"
+	line "is great! I'm too"
+	cont "shy to go inside"
+	cont "because I have a"
+	cont "crush on ERIKA.."
+	
+	para "..Hey! Don't tell"
+	line "anyone that!"
 	done
 
 _CeladonCityText3::

@@ -3017,7 +3017,7 @@ _SurfingNoPlaceToGetOffText::
 _RefusingText::
 	TX_RAM wcd6d
 	text ""
-	line "is refusing!"
+	line "is excited!"
 	prompt
 
 _VitaminStatRoseText::
@@ -3391,3 +3391,5 @@ INCLUDE "text/pokedex.asm"
 SECTION "Move Names", ROMX, BANK[MOVE_NAMES]
 
 INCLUDE "text/move_names.asm"
+
+INCLUDE "text/pokedex2.asm"

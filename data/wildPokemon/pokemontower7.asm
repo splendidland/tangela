@@ -4,11 +4,11 @@ TowerMons7:
 	db 25,GASTLY
 	db 26,GASTLY
 	db 27,GASTLY
-	db 28,GASTLY
-	db 23,GASTLY
+	db 28,LITWICK
+	db 23,LITWICK
 	db 24,CUBONE
 	db 29,GASTLY
-	db 24,HAUNTER
+	db 24,LAMPENT
 	db 29,HAUNTER
 	db $00
 

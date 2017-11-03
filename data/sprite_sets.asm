@@ -83,7 +83,7 @@ SpriteSets:
 	db SPRITE_LASS
 	db SPRITE_BLACK_HAIR_BOY_1
 	db SPRITE_BALL
-	db SPRITE_LYING_OLD_MAN_UNUSED_2
+	db SPRITE_THREE
 
 ; sprite set $03
 	db SPRITE_PIKACHU
@@ -148,7 +148,7 @@ SpriteSets:
 	db SPRITE_ROCKER
 	db SPRITE_BLACK_HAIR_BOY_1
 	db SPRITE_BALL
-	db SPRITE_LYING_OLD_MAN_UNUSED_2
+	db SPRITE_ANGEL
 
 ; sprite set $08
 	db SPRITE_PIKACHU
@@ -491,9 +491,9 @@ SpriteSheetPointerTable:
 	db BANK(SeelSprite)
 
 	; SPRITE_PIKACHU
-	dw PikachuSprite
+	dw TangelaSprite
 	db $c0
-	db BANK(PikachuSprite)
+	db BANK(TangelaSprite)
 
 	; SPRITE_OFFICER_JENNY
 	dw OfficerJennySprite
@@ -538,7 +538,7 @@ SpriteSheetPointerTable:
 	; SPRITE_JAMES
 	dw JamesSprite
 	db $c0
-	db BANK(JamesSprite)
+	db BANK(JamesSprite)	
 
 	; SPRITE_BALL
 	dw BallSprite
@@ -599,3 +599,33 @@ SpriteSheetPointerTable:
 	dw LyingOldManSprite
 	db $40 ; byte count
 	db BANK(LyingOldManSprite)
+	
+	; SPRITE_TANG
+	dw TangrowthSprite
+	db $c0
+	db BANK(TangrowthSprite)
+	
+	; SPRITE_XURK
+	dw XurkitreeSprite
+	db $c0
+	db BANK(XurkitreeSprite)	
+	
+	; SPRITE_CELEST
+	dw CelesteelaSprite
+	db $c0
+	db BANK(CelesteelaSprite)	
+	
+	; SPRITE_UBO
+	dw NihilegoSprite
+	db $c0
+	db BANK(NihilegoSprite)
+	
+	; SPRITE_THREE
+	dw ThreemanSprite
+	db $c0
+	db BANK(ThreemanSprite)
+	
+	; SPRITE_ANGEL
+	dw AngelSprite
+	db $c0
+	db BANK(AngelSprite)

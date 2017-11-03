@@ -23,6 +23,7 @@ Route3TextPointers:
 	dw Route3Text8
 	dw Route3Text9
 	dw Route3Text10
+	dw ThreemanText
 
 Route3TrainerHeaders:
 Route3TrainerHeader0:
@@ -249,4 +250,50 @@ Route3AfterBattleText8:
 
 Route3Text10:
 	TX_FAR _Route3Text10
+	db "@"
+
+ThreemanTrainerHeader:
+	dbEventFlagBit EVENT_BEAT_THREEMAN, 1
+	db 0 ; view range
+	dwEventFlagAddress EVENT_BEAT_THREEMAN, 1
+	dw ThreemanBattleText ; TextBeforeBattle
+	dw ThreemanBattleText ; TextAfterBattle
+	dw ThreemanBattleText ; TextEndBattle
+	dw ThreemanBattleText ; TextEndBattle
+
+	db $ff
+	
+InitThreemanBattle:
+    push hl
+    ld hl, wObtainedBadges
+    ld b, $1
+    call CountSetBits
+    cp 3
+    pop hl
+    jr c, .lessThanThreeBadges
+    call TalkToTrainer
+    ld a, [wCurMapScript]
+    ld [wRoute3CurScript], a
+    jr .done
+.lessThanThreeBadges
+    ld hl, ThreemanDeniedText 
+    call PrintText
+.done
+    jp TextScriptEnd
+
+ThreemanText:
+	TX_ASM
+	ld hl, ThreemanTrainerHeader
+	jr InitThreemanBattle
+	
+ThreemanBattleText:
+	TX_FAR _ThreemanBattleText
+	TX_ASM
+	ld a, THREEMAN
+	call PlayCry
+	call WaitForSoundToFinish
+	jp TextScriptEnd
+	
+ThreemanDeniedText:
+	TX_FAR _ThreemanDeniedText
 	db "@"

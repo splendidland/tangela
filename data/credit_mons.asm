@@ -3,7 +3,7 @@ CreditsMons:
 	db ARBOK
 	db RHYHORN
 	db FEAROW
-	db ABRA
+	db HERACROSS
 	db GRAVELER
 	db HITMONLEE
 	db TANGELA
@@ -11,7 +11,7 @@ CreditsMons:
 	db GYARADOS
 	db DITTO
 	db OMASTAR
-	db VILEPLUME
+	db ROSERADE
 	db NIDOKING
 	db PARASECT
 

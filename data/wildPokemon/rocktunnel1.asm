@@ -9,6 +9,6 @@ TunnelMonsB1:
 	db 21,ZUBAT
 	db 17,MACHOP
 	db 19,MACHOP
-	db 21,MACHOP
+	db 21,GLIGAR
 	db $00
 

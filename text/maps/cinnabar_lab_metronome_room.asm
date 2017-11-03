@@ -45,12 +45,19 @@ _Lab3Text3::
 	cont "ARTICUNO, ZAPDOS"
 	cont "and MOLTRES."
 
-	para "Their whereabouts"
-	line "are unknown."
+	para "We found them all"
+	line "some time ago."
 
-	para "We plan to explore"
-	line "the cavern close"
-	cont "to CERULEAN."
+	para "But honestly, they"
+	line "are such a pain."
+	
+	para "The only legendary"
+	line "thing about them"
+	cont "is the mess they"
+	cont "made on my car."
+	
+	para "We really want to"
+	line "give them away..."
 
 	para "From: #MON"
 	line "RESEARCH TEAM"

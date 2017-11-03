@@ -1,6 +1,6 @@
 PlateauMons1:
 	db $0F
-	db 26,GEODUDE
+	db 26,BALTOY
 	db 31,GEODUDE
 	db 36,GEODUDE
 	db 39,ZUBAT
@@ -9,6 +9,6 @@ PlateauMons1:
 	db 43,ONIX
 	db 45,ONIX
 	db 41,GRAVELER
-	db 47,GRAVELER
+	db 47,CLAYDOL
 	db $00
 

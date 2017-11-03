@@ -12,6 +12,8 @@ const_value = 0
 	const SPRITE_SNAKE            ; $8
 	const SPRITE_QUADRUPED        ; $9
 	const SPRITE_PIKACHU_FAMILY   ; $A
+	const SPRITE_TANGROWTH        ; $55
+	const SPRITE_XURKITREE        ; $56
 ; overworld sprites
 const_value = 1
 
@@ -99,7 +101,12 @@ const_value = 1
 	const SPRITE_LYING_OLD_MAN_UNUSED_1    ; $50
 	const SPRITE_LYING_OLD_MAN_UNUSED_2    ; $51
 	const SPRITE_LYING_OLD_MAN             ; $52
-
+	const SPRITE_TANG                      ; $53
+	const SPRITE_XURK                      ; $54
+	const SPRITE_CELEST                    ; $55
+	const SPRITE_UBO                       ; $56
+	const SPRITE_THREE                     ; $57
+	const SPRITE_ANGEL					   ; $58
 ; different kinds of people events
 ITEM    EQU $80
 TRAINER EQU $40

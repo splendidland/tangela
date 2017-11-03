@@ -10,4 +10,5 @@ PowerPlantMons:
 	db 38,MAGNETON
 	db 33,MUK
 	db 37,MUK
+	db 37,ELECTABUZZ
 	db $00

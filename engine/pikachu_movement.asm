@@ -951,17 +951,36 @@ GFX_fd86b:
 INCBIN "gfx/unknown_fd86b.2bpp"
 
 LoadPikachuSpriteIntoVRAM:
-	ld de, PikachuSprite
-	lb bc, BANK(PikachuSprite), (SandshrewSprite - PikachuSprite) / 32
+  callab IsStarterPikachuInOurParty2
+  jr nz, .Tangrowth
+  ld de, TangelaSprite
+	lb bc, BANK(TangelaSprite), (SandshrewSprite - TangelaSprite) / 32
+	jr .go
+.Tangrowth
+	ld de, TangelaSprite
+	lb bc, BANK(TangelaSprite), (SandshrewSprite - TangelaSprite) / 32
+.go
 	ld hl, vNPCSprites + $c * $10
 	push bc
 	call CopyVideoDataAlternate
-	ld de, PikachuSprite + $c * $10
+	callab IsStarterTangrowthInOurParty
+	jr z, .Pikachu2
+	ld de, TangrowthSprite + $c * $10
+  jr .goo
+.Pikachu2
+	ld de, TangelaSprite + $c * $10
+.goo
 	ld hl, vNPCSprites2 + $c * $10
 	ld a, [h_0xFFFC]
 	and a
 	jr z, .load
-	ld de, PikachuSprite + $c * $10
+	callab IsStarterTangrowthInOurParty
+	jr z, .Pikachu3
+	ld de, TangrowthSprite + $c * $10
+  jr .goo2
+.Pikachu3
+	ld de, TangrowthSprite + $c * $10
+.goo2
 	ld hl, vNPCSprites2 + $4c * $10
 .load
 	pop bc

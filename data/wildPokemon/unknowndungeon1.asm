@@ -1,7 +1,8 @@
 DungeonMons1:
 	db $0A
 	db 50,GOLBAT
-	db 55,GOLBAT
+	db 50,EEVEE
+	db 55,CLAYDOL
 	db 45,GRAVELER
 	db 55,GLOOM
 	db 55,WEEPINBELL

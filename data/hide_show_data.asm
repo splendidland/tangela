@@ -19,7 +19,7 @@ MapHSPointers:
 	dw MapHSXX
 	dw MapHSXX
 	dw MapHS0D
-	dw MapHSXX
+	dw MapHS0E
 	dw MapHS0F
 	dw MapHSXX
 	dw MapHSXX
@@ -99,7 +99,7 @@ MapHSPointers:
 	dw MapHSXX
 	dw MapHSXX
 	dw MapHSXX
-	dw MapHSXX
+	dw MapHS5E
 	dw MapHSXX
 	dw MapHS60
 	dw MapHSXX
@@ -583,6 +583,10 @@ MapHSA2:
 	db SEAFOAM_ISLANDS_5, $01, Hide
 	db SEAFOAM_ISLANDS_5, $02, Hide
 	db SEAFOAM_ISLANDS_5, $03, Show
+MapHS0E:
+	db ROUTE_3, $0a, Show
+MapHS5E:
+	db VERMILION_DOCK, $01, Show
 
 MapHS27Copy:
 ; doesn't seem to be referenced

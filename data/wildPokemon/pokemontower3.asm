@@ -6,9 +6,9 @@ TowerMons3:
 	db 23,GASTLY
 	db 24,GASTLY
 	db 19,GASTLY
-	db 18,GASTLY
-	db 25,GASTLY
+	db 18,LITWICK
+	db 25,LITWICK
 	db 20,HAUNTER
-	db 25,HAUNTER
+	db 25,LAMPENT
 	db $00
 

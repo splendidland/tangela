@@ -4,7 +4,7 @@ TunnelMonsB2:
 	db 17,GEODUDE
 	db 18,MACHOP
 	db 21,ZUBAT
-	db 22,ZUBAT
+	db 22,GLIGAR
 	db 21,GEODUDE
 	db 20,MACHOP
 	db 14,ONIX

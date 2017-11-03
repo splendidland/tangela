@@ -143,3 +143,18 @@ _Route3Text10::
 	text "ROUTE 3"
 	line "MT.MOON AHEAD"
 	done
+	
+_ThreemanBattleText::
+	text "You have at least"
+	line "three badges!"
+	cont "THREEMAN loves"
+	cont "what it sees!"
+	
+	para "Threeeeee!!@@"
+	text ""
+	
+_ThreemanDeniedText::
+	text "THREEMAN isn't"
+	line "very impressed by"
+	cont "your badge count."
+	done

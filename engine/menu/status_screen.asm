@@ -182,7 +182,13 @@ StatusScreen:
 	callab IsThisPartymonStarterPikachu_Box
 	jr nc, .playRegularCry
 .playPikachuSoundClip
-	ld e, 16
+  callab IsStarterTangrowthInOurParty ;really should make one to check box too...
+  jr nc, .Pikachu
+  ld e,8 ;load voice '5', which I changed to Raichu. Note e starts on 0 to load PikachuCry1.
+  jr .cry
+.Pikachu
+	ld e, 16 ;pikachu's original cry for this one.
+.cry
 	callab PlayPikachuSoundClip
 	jr .continue
 .playRegularCry

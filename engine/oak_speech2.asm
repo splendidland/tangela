@@ -189,9 +189,9 @@ DisplayIntroNameTextBox:
 
 DefaultNamesPlayer:
 	db   "NEW NAME"
-	next "YELLOW"
-	next "ASH"
-	next "JACK"
+	next "SAMANTH"
+	next "BEETLE"
+	next "SPROUT"
 	db   "@"
 
 DefaultNamesRival:
@@ -227,9 +227,9 @@ GetDefaultName:
 
 DefaultNamesPlayerList:
 	db "NEW NAME@"
-	db "YELLOW@"
-	db "ASH@"
-	db "JACK@"
+	db "SAMANTH@"
+	db "BEETLE@"
+	db "SPROUT@"
 
 DefaultNamesRivalList:
 	db "NEW NAME@"

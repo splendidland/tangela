@@ -325,8 +325,13 @@ IsPlayerPikachuAsleepInParty:
 	ld a, [hl]
 	cp $ff
 	jr z, .done
-	cp PIKACHU
+    cp TANGROWTH
+	jr nz, .isPika
+	jr .yes
+.isPika
+	cp TANGELA
 	jr nz, .curMonNotStarterPikachu
+.yes
 	callab IsThisPartymonStarterPikachu
 	jr nc, .curMonNotStarterPikachu
 	ld a, [wWhichPokemon]
@@ -359,7 +364,8 @@ INCLUDE "data/pikachu_emotions.asm"
 PikachuWalksToNurseJoy:
 	ld a, $40
 	ld [h_0xFFFC], a
-	call LoadPikachuSpriteIntoVRAM
+    call LoadPikachuShadowIntoVRAM
+	call LoadPikachuBallIconIntoVRAM	
 	call .GetMovementData
 	and a
 	jr z, .skip

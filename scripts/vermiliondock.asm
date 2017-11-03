@@ -1,40 +1,68 @@
 VermilionDockScript:
-	call EnableAutoTextBoxDrawing
-	CheckEventHL EVENT_STARTED_WALKING_OUT_OF_DOCK
-	jr nz, .asm_1db8d
-	CheckEventReuseHL EVENT_GOT_HM01
-	ret z
-	ld a, [wDestinationWarpID]
-	cp $1
-	ret nz
-	CheckEventReuseHL EVENT_SS_ANNE_LEFT
-	jp z, VermilionDock_1db9b
-	SetEventReuseHL EVENT_STARTED_WALKING_OUT_OF_DOCK
-	call Delay3
-	ld hl, wd730
-	set 7, [hl]
-	ld hl, wSimulatedJoypadStatesEnd
-	ld a, D_UP
-	ld [hli], a
-	ld [hli], a
-	ld [hl], a
-	ld a, $3
-	ld [wSimulatedJoypadStatesIndex], a
-	xor a
-	ld [wSpriteStateData2 + $06], a
-	ld [wOverrideSimulatedJoypadStatesMask], a
-	dec a
-	ld [wJoyIgnore], a
-	ret
+    call EnableAutoTextBoxDrawing
+    CheckEventHL EVENT_STARTED_WALKING_OUT_OF_DOCK
+    jr nz, .asm_1db8d
+    CheckEventReuseHL EVENT_GOT_HM01
+    jr z, .trainerCheck
+    ld a, [wDestinationWarpID]
+    cp $1
+    jr nz, .trainerCheck
+    CheckEventReuseHL EVENT_SS_ANNE_LEFT
+    jp z, VermilionDock_1db9b
+    SetEventReuseHL EVENT_STARTED_WALKING_OUT_OF_DOCK
+    call Delay3
+    ld hl, wd730
+    set 7, [hl]
+    ld hl, wSimulatedJoypadStatesEnd
+    ld a, D_UP
+    ld [hli], a
+    ld [hli], a
+    ld [hl], a
+    ld a, $3
+    ld [wSimulatedJoypadStatesIndex], a
+    xor a
+    ld [wSpriteStateData2 + $06], a
+    ld [wOverrideSimulatedJoypadStatesMask], a
+    dec a
+    ld [wJoyIgnore], a
+    ret
 .asm_1db8d
-	CheckEventAfterBranchReuseHL EVENT_WALKED_OUT_OF_DOCK, EVENT_STARTED_WALKING_OUT_OF_DOCK
-	ret nz
-	ld a, [wSimulatedJoypadStatesIndex]
-	and a
-	ret nz
-	ld [wJoyIgnore], a
-	SetEventReuseHL EVENT_WALKED_OUT_OF_DOCK
-	ret
+    CheckEventAfterBranchReuseHL EVENT_WALKED_OUT_OF_DOCK, EVENT_STARTED_WALKING_OUT_OF_DOCK
+    jr nz, .trainerCheck
+    ld a, [wSimulatedJoypadStatesIndex]
+    and a
+    ret nz
+    ld [wJoyIgnore], a
+    SetEventReuseHL EVENT_WALKED_OUT_OF_DOCK
+    ret
+.trainerCheck
+    ld hl, VermillionDockTrainerHeaders
+    ld de, .ScriptPointers
+    ld a, [wVermillionDockCurScript]
+    call ExecuteCurMapScriptInTable
+    ld [wVermillionDockCurScript], a
+    ret
+
+.ScriptPointers
+	dw CheckFightingMapTrainers
+	dw DisplayEnemyTrainerTextAndStartBattle
+	dw EndTrainerBattle
+	
+VermillionDockTextPointers:
+	dw MewText
+	
+VermillionDockTrainerHeaders:
+
+MewTrainerHeader:
+	dbEventFlagBit EVENT_BEAT_MEW, 1
+	db 0 ; view range
+	dwEventFlagAddress EVENT_BEAT_MEW, 1
+	dw MewBattleText ; TextBeforeBattle
+	dw MewBattleText ; TextAfterBattle
+	dw MewBattleText ; TextEndBattle
+	dw MewBattleText ; TextEndBattle
+
+	db $ff
 
 VermilionDock_1db9b:
 	SetEventForceReuseHL EVENT_SS_ANNE_LEFT
@@ -208,8 +236,32 @@ VermilionDock_EraseSSAnne:
 	ret
 
 VermilionDockTextPointers:
+	dw MewText
 	dw VermilionDockText1
 
 VermilionDockText1:
 	TX_FAR _VermilionDockText1
 	db "@"
+	
+InitMewBattle:
+	call TalkToTrainer
+	ld a, [wCurMapScript]
+	ld [wVermillionDockCurScript], a
+	jp TextScriptEnd
+	
+MewText:
+    TX_ASM
+    ld hl, MewTrainerHeader
+    call TalkToTrainer
+    ld a, HS_MEW
+    ld [wMissableObjectIndex], a
+    predef HideObject
+    jp TextScriptEnd
+	
+MewBattleText:
+	TX_FAR _MewBattleText
+	TX_ASM
+	ld a, MEW
+	call PlayCry
+	call WaitForSoundToFinish
+	jp TextScriptEnd

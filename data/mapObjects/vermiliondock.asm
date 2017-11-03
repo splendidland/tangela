@@ -7,7 +7,8 @@ VermilionDockObject:
 
 	db $0 ; signs
 
-	db $0 ; objects
+	db $1 ; objects
+	object SPRITE_SLOWBRO, $15, $0, STAY, DOWN, $1, MEW, 50
 
 	; warp-to
 	EVENT_DISP VERMILION_DOCK_WIDTH, $0, $e

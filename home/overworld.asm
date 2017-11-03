@@ -337,6 +337,13 @@ NewBattle::
 
 ; function to make bikes twice as fast as walking
 DoBikeSpeedup::
+
+ld a, [hJoyHeld] ; Check what buttons are being pressed for Shoes
+	and B_BUTTON ; Are you holding B?
+	jr z, .notRunning ; If you aren't holding B, skip ahead to step normally.
+	jp .goFaster ; Needs to link or call to your method of going faster. Make you go faster if you were holding B
+.notRunning ; Normal code resumes here
+
 	ld a, [wWalkBikeSurfState]
 	dec a ; riding a bike?
 	ret nz

@@ -10,5 +10,6 @@ ZoneMons2:
 	db 33,KANGASKHAN
 	db 25,SCYTHER
 	db 15,PINSIR
+	db 15,HERACROSS
 	db $00
 

@@ -1,7 +1,7 @@
 DungeonMonsB1:
 	db $19
 	db 54,GOLBAT
-	db 59,GOLBAT
+	db 59,CLAYDOL
 	db 55,GRAVELER
 	db 52,RHYHORN
 	db 62,RHYDON
@@ -9,6 +9,6 @@ DungeonMonsB1:
 	db 56,CHANSEY
 	db 65,DITTO
 	db 55,LICKITUNG
-	db 50,LICKITUNG
+	db 50,RAMIEL
 	db $00
 

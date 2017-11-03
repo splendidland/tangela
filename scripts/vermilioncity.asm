@@ -66,7 +66,7 @@ VermilionCityScript0:
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	CheckEvent EVENT_SS_ANNE_LEFT
-	jr nz, .asm_19810
+	;jr nz, .asm_19810
 	ld b, S_S_TICKET
 	predef GetQuantityOfItemInBag
 	ld a, b
@@ -175,7 +175,7 @@ VermilionCityText_198ac:
 VermilionCityText3:
 	TX_ASM
 	CheckEvent EVENT_SS_ANNE_LEFT
-	jr nz, .asm_198f6
+	;jr nz, .asm_198f6
 	ld a, [wPlayerFacingDirection]
 	cp SPRITE_FACING_RIGHT
 	jr z, .asm_198c8

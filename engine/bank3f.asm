@@ -11,7 +11,7 @@ Func_fe66e:
 	ret
 
 OfficerJennySprite:    INCBIN "gfx/sprites/officer_jenny.2bpp"
-PikachuSprite:         INCBIN "gfx/sprites/pikachu.2bpp"
+TangelaSprite:         INCBIN "gfx/sprites/pikachu.2bpp"
 SandshrewSprite:       INCBIN "gfx/sprites/sandshrew.2bpp"
 OddishSprite:          INCBIN "gfx/sprites/oddish.2bpp"
 BulbasaurSprite:       INCBIN "gfx/sprites/bulbasaur.2bpp"
@@ -21,3 +21,11 @@ ChanseySprite:         INCBIN "gfx/sprites/chansey.2bpp"
 SurfingPikachuSprite:  INCBIN "gfx/sprites/surfing_pikachu.2bpp"
 JessieSprite:          INCBIN "gfx/sprites/jessie.2bpp"
 JamesSprite:           INCBIN "gfx/sprites/james.2bpp"
+
+TangrowthSprite:       INCBIN "gfx/sprites/tangrowth.2bpp"
+XurkitreeSprite:       INCBIN "gfx/sprites/xurkitree.2bpp"
+CelesteelaSprite:      INCBIN "gfx/sprites/celesteela.2bpp"
+NihilegoSprite:        INCBIN "gfx/sprites/nihilego.2bpp"
+ThreemanSprite:        INCBIN "gfx/sprites/threeman.2bpp"
+AngelSprite:          INCBIN "gfx/sprites/angel.2bpp"
+

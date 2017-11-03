@@ -9,6 +9,6 @@ Route10Mons:
 	db 22,MAGNEMITE
 	db 20,RATICATE
 	db 16,MACHOP
-	db 18,MACHOP
+	db 18,GLIGAR
 	db $00
 
